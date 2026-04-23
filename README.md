@@ -52,7 +52,9 @@ README.md
 ## Clase 2 
 
 
-### Los estrados de GIT
+### Los estados de GIT
+
+![imagen de esquema](images/esquemagit.png) 
 
 #### Directorio de trabajo (Modificado)
 
@@ -86,6 +88,7 @@ Cuando quiero que un archivo modificado anteriormente vuelva a su estado origina
 git restore <archivo>
 Nota: Borra todo fisicamente por lo que no se podra recuperar 
 
+![imagen de .gitignore](images/capgitignore.png)
 
 En el caso en el que un archivo que cree no quiero que GIT lo vea:
 Lo que debo hacer es agregar el nombre completo del archivo al .gitignore 
@@ -112,6 +115,12 @@ git commit -m "mensaje"
 y para deshacer el ultimo commit es:
 
 git reset --soft HEAD~1
+
+
+
+![imagen de esquema 2](images/esquema.png)
+
+
 
 ### Buenas Practicas
 
