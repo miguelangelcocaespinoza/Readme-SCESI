@@ -157,7 +157,7 @@ git commit -m "feat:Add mew search feature"
 - perf: para cambios que mejoran el rendimiento.
 - build: para cambios del sistema.
 - ci: para cambios en la integracion.
-- docs: para cmabios en la documentacion.
+- docs: para cambios en la documentacion.
 - refactor: para cambios de nombre en variables o funciones.
 - style: para cambios de formato, tabulaciones o cosas que no afectan a usuario.
 - test: para test o refactorizacion de uno ya existente.
@@ -171,6 +171,82 @@ prefijo: Titulo de tu commit
 
 Cuerpo que describe tu commit
 
+
+
+
+## Clase 3
+
+
+## GITHUB Y SSH
+
+### Que es GITHUB?
+
+Es una plataforma online para almacenar y comparitr codigo usando GIT.
+ 
+### Diferencioa entre GIT y GITHUB
+
+La principal diferencia es que GIT controla las versiones en tu PC mientra que GITHUB guarda las versiones de manera online.
+
+### SSH y HTTPS
+
+SSH: Solo se necesita una autenticacion lo cual resulta mas facil
+HTTPS: Al clonar un repositorio en HTTPS nos pedira la autenticacion cad vez o un token lo cual lo hace menos eficiente.
+
+### Configuracion SSH
+
+En la terminal ejecutamos los siguientes comandos:
+
+ssh-keygen -t ed25519 -C "tu-correo@email.com"
+cat ~/.ssh/id_ed25519.pub
+
+Luego copias lo que sale y en tu perfil de github a settings, ssh,GPG Keys, New ssh key" pegas la key, le asignas nombre a tu pc y luego en add
+
+ssh -T git@github.com
+
+### Crea tu repositorio en GITHUB
+
+En la parte de repositorios presionas TAB y presionas "New"
+
+Nombras a tu repositorio y luego en create repository
+
+### Conectar el repositorio local de GIT con uno Github
+
+git remote add origin git@github.com:TuUser/TuRepo.git
+
+git brnch -M main
+git push -u origin main
+
+### Clonar un repositorio de GIT
+
+git clone "git@email.com:TuUser/Tu Repo.git"
+
+Si esta en https: 
+git clone "https://github.com/TuUser/TuRepo.git"
+
+Para cambiar el puntero de git y que no pide autenticacion cada momento.
+git remote set-url origin "git@github.com:TuUser/TuRepo.git"	
+Tambien sirve para cambiar el repositorio remoto al que esta conectado el repositorio.
+
+Para ver a que repositorio remoto esta conectada tu repo:
+git remote -v
+
+### Cambios
+
+#### Subir mis cambios
+
+git push origin <rama>
+
+git push: "Empujar" commits
+origin: Al servidor llamado origin
+<rama>: A la <rama> de mi codigo
+
+####Bajar cambios hechos
+
+git pull origin <rama>
+
+git pull:Traer commits del servidor
+origin: del servidor origin
+<rama>: La <rama> de mi codigo
 
 
 
