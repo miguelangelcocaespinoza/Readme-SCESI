@@ -251,6 +251,102 @@ origin: del servidor origin
 
 
 
+## Clase 4
+
+### GIT remote
+
+Este nos permite tener conexion con un repositorio remoto dandole las indicaciones de donde mandar o traer la informacion 
+Algunos comandos usados son:
+-git remote -v(Poder ver las URLs que apunta nuestro repo.
+-git remote add <apodo>"url"(Vincula nuestro repo local con el repositorio remoto)
+-git remote set-url <apodo>"url"(Cambio de url)
+
+### Multiples SSH
+
+En el caso en el de tenere mas de una cuenta de github o necesitar tenere otras se necesitara una llave para cada una 
+
+### Configurar multiples SSH
+
+#### Paso 1
+
+Generar el sshkey con distinto nombre
+ssh-keygen -t ed25519 -C
+"micorreo@gmail.com" -f ~/.ssh/id_miname
+#### Paso 2
+Crear un archivo config para que no chequen las Keys
+-Cuenta Personal()
+ Host github.com
+   HostName github.com
+   Usergit
+   IdentifyFile ~/ssh/id-ed25519
+-Cuenta del otro correo 
+ Host github.com
+   HostName github.com
+   User git
+   IdentifyFile ~/ssh/id_miname
+*Host: Es el sobre nombre de la conexion (git@Host)
+*Hostname: Es la direccion real del servidor a donde nos conectaremos (github.com)
+*User: Es el nombre de usuario de github (git.)
+*IdentifyFile: Es la ruta exacta de la llave que quieres usar para ese host
+
+#### Paso 3
+
+Para verificar su funcionalidad se ejecuta el siguiente comando: 
+ssh -T git@github-miname
+
+### Configuraciones locales 
+
+git config user.name"Mi nuevo name"
+git config user.email"micorreo@gmail.com"
+
+Nota: Hacer GIT CLONE con el host correcto 
+git clone git@github-miname:usuario/repo.git
+
+### Git Checkout
+
+Este nos permite movernos entre:
+
+Commits(viajes al pasado)
+Ramas(Cambiar de linea de trabajo)
+Archivos(restaurarlos)
+
+El estado "Detached HEAD"
+El estado desacoplado apunta hacia un commit y no a la rama
+
+-Ver hacia un commits viejo
+-Pero no puedes hacer cambios ahi
+-Al salir tus pruebas desaparecen
+
+### Como ir y volver de un commit?
+
+Para retroceder
+git checkout <hash_antiguo>
+para volver al ultimo hash de la rama 
+git checkout <rama>
+
+Si hiciste un commit este desaparecera a menos que hagas 
+git checkout <hash_commit_creado>
+git checkout -b rama_nueva
+
+### Buenas practicas del check out
+
+#### No usar mucho tiempo 'Deteched HEAD'
+Si haras mas de dos lineas preferiblemente crea una rama nueva
+#### Limpia tu directorio de trabajo 
+Antes de hacer esto crea un commit o no podras hacerlo
+#### Usalo solo para aprender
+Esto es para entender como se crearon
+
+
+
+
+
+
+
+
+
+
+
 
 
 
