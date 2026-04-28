@@ -340,14 +340,66 @@ Esto es para entender como se crearon
 
 
 
+## Clase 5
 
+### Que son las ramas?
 
+Basicamente es crear un nuevo camino a partir de cierto punto del codigo que nos permite tener un mejor control sobre como ira evolucionando el mismo en paralelo a otras ramas
 
+### Git Branch
+Esta herramienta nos deja gestionar las ramas de nuestro proyecto
 
+#### Comando 1-
+git branch: Permite listar las ramas disponibles y el posicionamiento del HEAD
+#### Comando 2-
+git branch <rama>: Crear una nueva rama justo en la posicion que nos encontramos
+#### Comando 3-
+git branch -D <rama>: Borrar la rama
 
+### Git Checkout Enfocado en ramas
 
+Aparte de ser usado para ver los anteriores archivos en base a los commits tambien se puede usar junto a las ramas
 
+#### git checkout <rama>:
+Cambiar de ramas(Pero no debemos tener ningun archivo sin seguimiento o modificado sin incluir)
+#### git checkout -b <rama>:
+Crear una rama y nos redirecciona a ella automaticamente 
 
+### GIT CHECKOUT VS GIT SWITCH
+
+Originalmente git checkout estaba sobrecargado de funcionalidades y usos pero esto implicaba que hubiera muchos comandos parecidos lo que llevaba a que a una minimo error podria acabar en Detached HEAD.
+Por lo que se greo git switch para separar la parte de navegacion de ramas de las demas funciones 
+git checkout sige teniendo las mismas funciones pero switch evita errores
+
+### GITFLOW Basico
+
+Esto permite trabajar de manera ordenada entre nuestras ramas, versiones lo cual en proyectos grandes resulta de gran utilidad
+
+### Como funciona GITFLOW?
+
+#### main 
+Esta es nuestra rama principal que se crea con nuestro repositorio de git y su objetivo es contener el codigo 
+#### develop
+Es la rama preproduccion esta guarda las caracteristicas que todavia no fueron aprobadas o validadas 
+#### Ramas de apoyo 
+Estas nos permitiran escribir nuestro codigo las cuales pueden ser: feature, release, hotfix
+-feature: Estas se usan en el caso en el que se este trabajando en nuevas caracteristicas para el proyecto a partir de develop y al finalizar se fusionan con develop y luego son eliminadas
+Ejemplo:
+feature/*
+feature/sum-function
+feature/ad-search-bar
+feature/new-form-user
+-release: En la preparacion de una nueva version es donde se hacen pruebas, se crean en develop y luego se fusiona a main o develop
+Ejemplo:
+release/*
+release/v1.0.0
+release/v2.1.0-beta
+-hotfix: Es para cambios imprevistos como parches o bugs, se lo debe crear desde la rama main
+Ejemplos:
+hotfix/*
+hotfix/login-autentication-error
+hotfix/fix-database-conectionleak
+hotfixsecuritypatchv1.0.2
 
 
 
