@@ -16,7 +16,7 @@ Basicamente para guardar cambios a lo largo de un proyecto de forma local
 ### Como nacio GIT?
 
 ![imagen de linus-linux](images/linuslinux.jpeg)
-![imagen de padre e hijo](images/padre e hijo.jpeg)
+![imagen de padre e hijo](images/peh.jpeg)
 
 Git nacio porque Linus Torvalds al estar usando BitKeeper se canso de las limitaciones que le imponian,
 asi que del coraje el lo que hizo fue crear su propio sistema de control de versiones
@@ -24,7 +24,7 @@ lo cual le tomo unas 2 a 3 semanas y ya lo tenia listo.
 
 ### Como instalar GIT?
 
-![imagen de linux](images/linux.jpeg)
+![imagen de git](images/logo.png)
 
 Para instalarlo lo unicio que se debe hacer es ingresar a la pagina de GIT https://git-scm.com/ 
 en el cual debes seleccionar si lo descagaras para Windows, Linux, Mac OS en le caso de Windows solo es cuestion de descargar el instalador
@@ -384,22 +384,74 @@ Es la rama preproduccion esta guarda las caracteristicas que todavia no fueron a
 #### Ramas de apoyo 
 Estas nos permitiran escribir nuestro codigo las cuales pueden ser: feature, release, hotfix
 -feature: Estas se usan en el caso en el que se este trabajando en nuevas caracteristicas para el proyecto a partir de develop y al finalizar se fusionan con develop y luego son eliminadas
+
 Ejemplo:
 feature/*
 feature/sum-function
 feature/ad-search-bar
 feature/new-form-user
+
+
 -release: En la preparacion de una nueva version es donde se hacen pruebas, se crean en develop y luego se fusiona a main o develop
+
 Ejemplo:
 release/*
 release/v1.0.0
 release/v2.1.0-beta
+
+
 -hotfix: Es para cambios imprevistos como parches o bugs, se lo debe crear desde la rama main
+
 Ejemplos:
 hotfix/*
 hotfix/login-autentication-error
 hotfix/fix-database-conectionleak
-hotfixsecuritypatchv1.0.2
+h
+otfixsecuritypatchv1.0.2
+
+
+
+## Clase 6
+
+### Que es GIT merge?
+
+Nos permite fusionar nuestras ramas en una sola. Imagina que tienes dos lineas de tiempo paralelas y quieres unirlas.
+#### Ejemplo :
+-git merge rama-feature
+#### Flag --no-ff (no fast-forward)
+Si tenemos la rama main con ABC y la rama feature con DE
+######  Sin --no-ff (por defecto):
+-Si fusionas, parece que D y E siempre estuvieron en main. Se pierde la historia de que existio una rama separada.
+######  Con --no-ff:
+-La M es un commit de fusion que registra: "aqui se unio la rama-feature". Aunque borres la rama, queda la evidencia.
+
+### git fetch - Ver cambios sin aplicarlos
+Es consultar si hay cambios nuevos sin hacer cambios en mi codigo.
+-git fetch origin
+
+### git pull 
+Es traer los cambios de github a nuestra computadora
+-git pull origin rama
+
+### git push
+Es subir los cambios realizados de forma local a github
+-git push origin rama
+
+Nota: Si no es tu repo la primera vez debes usar el flag -u para no pedir permisos
+-git push origin -u rama
+
+### Flujo de trabajo 
+
+git checkout develop
+git fetch
+git pull origin develop
+git merge –no-ff rama
+
+git add .
+git commit -m "prefijo: mensaje"
+git branch -D rama 
+git push origin develop
+
 
 
 
