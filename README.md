@@ -8,15 +8,15 @@ Miguel Angel Coca Espinoza
 
 ### Que es GIT?
 
-![imagen de git](image/git.png)
+![imagen de git](images/gitlogo.png)
 
 Es un sistema de control de versiones
 Basicamente para guardar cambios a lo largo de un proyecto de forma local
 
 ### Como nacio GIT?
 
-![imagen de linus-linux](images/linuslinux.png)
-![imagen de padre e hijo](images/padre e hijo.png)
+![imagen de linus-linux](images/linuslinux.jpeg)
+![imagen de padre e hijo](images/padre e hijo.jpeg)
 
 Git nacio porque Linus Torvalds al estar usando BitKeeper se canso de las limitaciones que le imponian,
 asi que del coraje el lo que hizo fue crear su propio sistema de control de versiones
@@ -24,7 +24,7 @@ lo cual le tomo unas 2 a 3 semanas y ya lo tenia listo.
 
 ### Como instalar GIT?
 
-![imagen de linux](images/linux.png)
+![imagen de linux](images/linux.jpeg)
 
 Para instalarlo lo unicio que se debe hacer es ingresar a la pagina de GIT https://git-scm.com/ 
 en el cual debes seleccionar si lo descagaras para Windows, Linux, Mac OS en le caso de Windows solo es cuestion de descargar el instalador
@@ -41,7 +41,7 @@ para ya luego tener GIT listo para su uso.
 
 README.md 
 
-![imagen de readme](images/readme.png)
+![imagen de readme](images/readme.jpeg)
 
 .gitignore
  
