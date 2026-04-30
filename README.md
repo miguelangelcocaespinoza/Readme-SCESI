@@ -4,7 +4,7 @@ Miguel Angel Coca Espinoza
 
 
 
-## Clase 1
+## ✨Clase 1✨
 
 
 ### Que es GIT?
@@ -14,7 +14,7 @@ Miguel Angel Coca Espinoza
 Es un sistema de control de versiones
 Basicamente para guardar cambios a lo largo de un proyecto de forma local
 
-### Como nacio GIT?
+### 🐥Como nacio GIT?🐥
 
 ![imagen de linus-linux](images/linuslinux.jpeg)
 ![imagen de padre e hijo](images/peh.jpeg)
@@ -23,7 +23,7 @@ Git nacio porque Linus Torvalds al estar usando BitKeeper se canso de las limita
 asi que del coraje el lo que hizo fue crear su propio sistema de control de versiones
 lo cual le tomo unas 2 a 3 semanas y ya lo tenia listo.
 
-### Como instalar GIT?
+### 📍Como instalar GIT?📍
 
 ![imagen de git](images/logo.png)
 
@@ -38,7 +38,7 @@ para ya luego tener GIT listo para su uso.
 -git config --global user.email "tu@correo.com"
 -git config --global core.autocrlf true
 
-### Archivos que todo repositorio de GIT deberia tener
+### 📋Archivos que todo repositorio de GIT deberia tener📋
 
 README.md 
 
@@ -50,7 +50,7 @@ README.md
 
 
 
-## Clase 2 
+## ✨Clase 2✨ 
 
 
 ### Los estados de GIT
@@ -66,7 +66,7 @@ La carpeta local, pero no esta asegurado
 El punto intermedio de el directorio y el repositorio
 en el cual va lo que si quiero guardar
 
-#### Repositorio Local (Confirmado)
+#### 💾Repositorio Local (Confirmado)💾
 
 Todos los cambio con ID (hash) uqe ya esta asegurado
 
@@ -74,11 +74,11 @@ Todos los cambio con ID (hash) uqe ya esta asegurado
 
 Es la carpeta comun pero bajo la observacion de GIT y cataloga en:
 
-#### Untracked
+#### 🛑Untracked🛑 
 
 Significa sin seguimiento pero no hay una version anterior esto suele pasar cuando recien son creadas.
 
-#### Modified 
+#### 🚩Modified🚩 
 
 Significa que en este caso GIT ya tiene una version previa de tu archivo pero lo modificaste, cambiaste nombre o eliminaste.
 
@@ -107,7 +107,7 @@ Para sacar archivo del stage a un estado anterior
 
 git restore --staged <archivo>
 
-### Repositorio Local (confirmado)
+### 💾Repositorio Local (confirmado)💾
 
 Para crear un commit o punto de guardado se debe poner lo siguiente:
 
@@ -123,7 +123,7 @@ git reset --soft HEAD~1
 
 
 
-### Buenas Practicas
+### ✅Buenas Practicas✅
 
 ![psytux](images/psytux.png)
 
@@ -131,7 +131,7 @@ git reset --soft HEAD~1
 
 Se usara lo que es los commits atomicos, las confirmaciones seran de cada cambio o acciones importantes pero pequeñas y que tengan un significado.
 
-### Escribir Buenos commits
+### ✅Escribir Buenos commits✅
 
 ![estudioso](images/estudioso.jpeg)
 
@@ -161,7 +161,7 @@ git commit -m "<tipo de commit>: <descripcion>"
 ejm
 git commit -m "feat:Add mew search feature"
 
-### Prefijos
+### 📌Prefijos📌
 - feat: para una nueva caracteristica agregada.
 - fix: para un bug que afecta a nuestro usuario.
 - perf: para cambios que mejoran el rendimiento.
@@ -184,7 +184,7 @@ Cuerpo que describe tu commit
 
 
 
-## Clase 3
+## ✨Clase 3✨
 
 
 ## GITHUB Y SSH
@@ -193,7 +193,7 @@ Cuerpo que describe tu commit
 
 Es una plataforma online para almacenar y comparitr codigo usando GIT.
  
-### Diferencioa entre GIT y GITHUB
+### 📝Diferencia entre GIT y GITHUB📝
 
 La principal diferencia es que GIT controla las versiones en tu PC mientra que GITHUB guarda las versiones de manera online.
 
@@ -202,7 +202,7 @@ La principal diferencia es que GIT controla las versiones en tu PC mientra que G
 SSH: Solo se necesita una autenticacion lo cual resulta mas facil
 HTTPS: Al clonar un repositorio en HTTPS nos pedira la autenticacion cad vez o un token lo cual lo hace menos eficiente.
 
-### Configuracion SSH
+### 🔨Configuracion SSH🔨
 
 En la terminal ejecutamos los siguientes comandos:
 
@@ -213,13 +213,13 @@ Luego copias lo que sale y en tu perfil de github a settings, ssh,GPG Keys, New 
 
 ssh -T git@github.com
 
-### Crea tu repositorio en GITHUB
+### 🧰Crea tu repositorio en GITHUB🧰
 
 En la parte de repositorios presionas TAB y presionas "New"
 
 Nombras a tu repositorio y luego en create repository
 
-### Conectar el repositorio local de GIT con uno Github
+### 🔗Conectar el repositorio local de GIT con uno Github🔗
 
 git remote add origin git@github.com:TuUser/TuRepo.git
 
@@ -240,7 +240,7 @@ Tambien sirve para cambiar el repositorio remoto al que esta conectado el reposi
 Para ver a que repositorio remoto esta conectada tu repo:
 git remote -v
 
-### Cambios
+### 🪚Cambios🪚
 
 #### Subir mis cambios
 
@@ -261,7 +261,7 @@ origin: del servidor origin
 
 
 
-## Clase 4
+## ✨Clase 4✨
 
 ### GIT remote
 
@@ -275,7 +275,7 @@ Algunos comandos usados son:
 
 En el caso en el de tenere mas de una cuenta de github o necesitar tenere otras se necesitara una llave para cada una 
 
-### Configurar multiples SSH
+### 🔨Configurar multiples SSH🔨
 
 #### Paso 1
 
@@ -338,7 +338,7 @@ Si hiciste un commit este desaparecera a menos que hagas
 git checkout <hash_commit_creado>
 git checkout -b rama_nueva
 
-### Buenas practicas del check out
+### ✅Buenas practicas del check out✅
 
 #### No usar mucho tiempo 'Deteched HEAD'
 Si haras mas de dos lineas preferiblemente crea una rama nueva
@@ -350,7 +350,7 @@ Esto es para entender como se crearon
 
 
 
-## Clase 5
+## ✨Clase 5✨
 
 ### Que son las ramas?
 
@@ -413,15 +413,18 @@ release/v2.1.0-beta
 - hotfix: Es para cambios imprevistos como parches o bugs, se lo debe crear desde la rama main
 
 Ejemplos:
-hotfix/*
-hotfix/login-autentication-error
-hotfix/fix-database-conectionleak
-h
-otfixsecuritypatchv1.0.2
+
+- hotfix/*
+
+- hotfix/login-autentication-error
+
+- hotfix/fix-database-conectionleak
+
+- hotfixsecuritypatchv1.0.2
 
 
 
-## Clase 6
+## ✨Clase 6✨
 
 ### Que es GIT merge?
 
@@ -469,13 +472,13 @@ Nota: Si no es tu repo la primera vez debes usar el flag -u para no pedir permis
 - git push origin develop
 
 
-## Clase 7
+## ✨Clase 7✨
 
 ### Que son los Pull Request(PRs)?
 
 Esto nos permite tener un mayor control sobre quien quiere mergear o unir a nuestro codigo base
 
-### Como crearlo?
+### 🛠️ Como crearlo?🛠️
 
 Luego de hacer git push origin rama:
 - Ve a tu repo remoto y hacer click en el boton "Compare & pull request"
@@ -512,7 +515,7 @@ La solucion (PRs):
 - Permiten saber que se va a implementar, quien lo hara y poder oponerse si es necesario
 - Facilitan un manejo grupal mas seguro del repositorio
 
-### Como proteger tu repositorio y limitar la colaboracion
+### 🔑Como proteger tu repositorio y limitar la colaboracion🔑
 
 Usa Pull Requests (PRs)
 
