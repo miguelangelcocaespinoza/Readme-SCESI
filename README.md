@@ -281,6 +281,8 @@ origin: del servidor origin
 
 ### GIT remote
 
+![remote](images/remote.png)
+
 Este nos permite tener conexion con un repositorio remoto dandole las indicaciones de donde mandar o traer la informacion 
 Algunos comandos usados son:
 -git remote -v(Poder ver las URLs que apunta nuestro repo.
@@ -330,6 +332,8 @@ git clone git@github-miname:usuario/repo.git
 
 ### Git Checkout
 
+![checkout](images/checkout.jpeg)
+
 Este nos permite movernos entre:
 
 Commits(viajes al pasado)
@@ -360,7 +364,7 @@ git checkout -b rama_nueva
 Si haras mas de dos lineas preferiblemente crea una rama nueva
 #### Limpia tu directorio de trabajo 
 Antes de hacer esto crea un commit o no podras hacerlo
-#### Usalo solo para aprender
+#### ⚠️ Usalo solo para aprender⚠️
 Esto es para entender como se crearon
 
 
