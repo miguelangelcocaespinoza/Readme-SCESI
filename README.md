@@ -3,6 +3,7 @@
 Miguel Angel Coca Espinoza
 
 
+
 ## Clase 1
 
 
@@ -392,7 +393,7 @@ feature/ad-search-bar
 feature/new-form-user
 
 
--release: En la preparacion de una nueva version es donde se hacen pruebas, se crean en develop y luego se fusiona a main o develop
+- release: En la preparacion de una nueva version es donde se hacen pruebas, se crean en develop y luego se fusiona a main o develop
 
 Ejemplo:
 release/*
@@ -400,7 +401,7 @@ release/v1.0.0
 release/v2.1.0-beta
 
 
--hotfix: Es para cambios imprevistos como parches o bugs, se lo debe crear desde la rama main
+- hotfix: Es para cambios imprevistos como parches o bugs, se lo debe crear desde la rama main
 
 Ejemplos:
 hotfix/*
@@ -421,39 +422,140 @@ Nos permite fusionar nuestras ramas en una sola. Imagina que tienes dos lineas d
 #### Flag --no-ff (no fast-forward)
 Si tenemos la rama main con ABC y la rama feature con DE
 ######  Sin --no-ff (por defecto):
--Si fusionas, parece que D y E siempre estuvieron en main. Se pierde la historia de que existio una rama separada.
+- Si fusionas, parece que D y E siempre estuvieron en main. Se pierde la historia de que existio una rama separada.
 ######  Con --no-ff:
--La M es un commit de fusion que registra: "aqui se unio la rama-feature". Aunque borres la rama, queda la evidencia.
+- La M es un commit de fusion que registra: "aqui se unio la rama-feature". Aunque borres la rama, queda la evidencia.
 
 ### git fetch - Ver cambios sin aplicarlos
 Es consultar si hay cambios nuevos sin hacer cambios en mi codigo.
--git fetch origin
+- git fetch origin
 
 ### git pull 
 Es traer los cambios de github a nuestra computadora
--git pull origin rama
+- git pull origin rama
 
 ### git push
 Es subir los cambios realizados de forma local a github
--git push origin rama
+- git push origin rama
 
 Nota: Si no es tu repo la primera vez debes usar el flag -u para no pedir permisos
--git push origin -u rama
+- git push origin -u rama
 
 ### Flujo de trabajo 
 
-git checkout develop
-git fetch
-git pull origin develop
-git merge –no-ff rama
+- git checkout develop
+
+- git fetch
+
+- git pull origin develop
+
+- git merge –no-ff rama
+
+- git add .
+
+- git commit -m "prefijo: mensaje"
+
+- git branch -D rama 
+
+- git push origin develop
+
+
+## Clase 7
+
+### Que son los Pull Request(PRs)?
+
+Esto nos permite tener un mayor control sobre quien quiere mergear o unir a nuestro codigo base
+
+### Como crearlo?
+
+Luego de hacer git push origin rama:
+- Ve a tu repo remoto y hacer click en el boton "Compare & pull request"
+- Escribe un titulo corto y una descripcion y click en "Create pull request"
+
+### Flujo de trabajo(Con pull request)
+- git checkout develop 
+- git fetch
+- git pull origin develop
+- git checkout rama # Agregas -b si estás creando la rama
+- git merge develop # Solo si hubo cambios en develop
+Trabajas en tu rama
+- git push origin rama # Agregas -u si es la primera vez que subes cambios al repositorio remoto
+- git checkout develop
+- git fetch
+- git checkout rama
+- git merge develop # Solo si hubo cambios en develop antes de hacer la PR
+- git add .
+- git commit
+- git push origin rama
+### Para que sirven los Pull Requests (PRs)
+
+Aunque podriamos trabajar sin ellos, los PRs son necesarios por seguridad y control.
+El problema: Cualquier colaborador podria modificar y fusionar codigo sin supervision, con el riesgo de:
+
+- Introducir errores
+- Anadir codigo malicioso
+- Comprometer el repositorio
+
+La solucion (PRs):
+
+- Obligan a revisar los cambios antes de integrarlos
+- Limitan la colaboracion y exigen debate previo
+- Permiten saber que se va a implementar, quien lo hara y poder oponerse si es necesario
+- Facilitan un manejo grupal mas seguro del repositorio
+
+### Como proteger tu repositorio y limitar la colaboracion
+
+Usa Pull Requests (PRs)
+
+- Obliga a revisar el codigo antes de unirlo a la rama principal
+- Nadie puede hacer merge sin autorizacion
+
+Configura reglas de proteccion de ramas (Branch protection rules)
+
+- Evita que alguien haga push directo a la rama main o master
+- Exige que los PRs tengan al menos una revision aprobada
+- Requiere que pasen pruebas automaticas (CI) antes de hacer merge
+
+Limita quien puede hacer merge
+
+- Designa solo a ciertas personas (ej: lideres del equipo) con permiso para aprobar y fusionar PRs
+
+Revisa los permisos de colaboradores
+
+- Asigna rol de "lector" a quienes solo deben ver el codigo
+- Asigna rol de "escritor" solo a quienes confias plenamente
+- Usa equipos y permisos granulares (ej: Github, Gitlab, Bitbucket)
+
+Habilita revisiones obligatorias
+
+- Configura que un PR no pueda fusionarse sin al menos 1 o 2 aprobaciones de otros miembros
+
+Usa herramientas de escaneo de seguridad
+
+-Detecta codigo malicioso o vulnerabilidades automaticamente (ej: Snyk, Dependabot)
+
+### Como colaborar sin ser colaborador invitado
+
+- Fork: Crea una copia del repositorio en tu cuenta
+
+- Clone: Baja tu copia a tu computadora
+
+
+- git clone en https://github.com/YOUR-USER/repo-name.git
+
+
+Branch: Crea una rama para tu cambio
+
+- git checkout -b your-branch-name
+
+Commit: Guarda tus cambios
 
 git add .
-git commit -m "prefijo: mensaje"
-git branch -D rama 
-git push origin develop
+git commit -m "Descripcion de tu cambio"
 
+Push: Sube los cambios a tu fork
+bash
 
+- git push origin your-branch-name
 
-
-
-
+Pull Request: Envia una solicitud al dueno del proyecto
