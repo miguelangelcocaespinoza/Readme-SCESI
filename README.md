@@ -125,10 +125,17 @@ git reset --soft HEAD~1
 
 ### Buenas Practicas
 
-####Cuando debo hacer un commit?
+![psytux](images/psytux.png)
+
+#### Cuando debo hacer un commit?
+
 Se usara lo que es los commits atomicos, las confirmaciones seran de cada cambio o acciones importantes pero pequeñas y que tengan un significado.
 
 ### Escribir Buenos commits
+
+![estudioso](images/estudioso.jpeg)
+
+![commit](images/commit.png)
 
 Se deben usar pocas palabras pero efectiva:
 #### Usar verbos imperativos (Add, Change, Fix, Remove)
@@ -143,7 +150,9 @@ Se deben usar pocas palabras pero efectiva:
 (Mal) git commit -m "Fix a problem with topbar..."
 (Bien) git commit -m "Change the default system color"
 
-### Escribe buenos commits'
+### Escribe buenos commits
+
+![check](images/check.png)
 
 -Usa como maximo 50 caracteres: El mensaje debe ser corto, objetivo y claro y solo debe tener un cambio y si se puede separar hazlo.
 -Usa un prefijo para tus commits para hacerlos mas semanticos: Para que sea mas entendible de que se tratara el commit y de que trata
@@ -550,8 +559,8 @@ Branch: Crea una rama para tu cambio
 
 Commit: Guarda tus cambios
 
-git add .
-git commit -m "Descripcion de tu cambio"
+- git add .
+- git commit -m "Descripcion de tu cambio"
 
 Push: Sube los cambios a tu fork
 bash
