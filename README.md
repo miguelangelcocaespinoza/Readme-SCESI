@@ -191,18 +191,28 @@ Cuerpo que describe tu commit
 
 ### Que es GITHUB?
 
+![github](images/github.jpeg)
+
 Es una plataforma online para almacenar y comparitr codigo usando GIT.
  
 ### 📝Diferencia entre GIT y GITHUB📝
+
+![gvsgh](images/gitvsgithub.png)
+
+![dif](images/dif.jpeg)
 
 La principal diferencia es que GIT controla las versiones en tu PC mientra que GITHUB guarda las versiones de manera online.
 
 ### SSH y HTTPS
 
+![ssh y https](images/sshht.png)
+
 SSH: Solo se necesita una autenticacion lo cual resulta mas facil
 HTTPS: Al clonar un repositorio en HTTPS nos pedira la autenticacion cad vez o un token lo cual lo hace menos eficiente.
 
 ### 🔨Configuracion SSH🔨
+
+![ssh](images/ssh.png)
 
 En la terminal ejecutamos los siguientes comandos:
 
@@ -215,11 +225,15 @@ ssh -T git@github.com
 
 ### 🧰Crea tu repositorio en GITHUB🧰
 
+![repo](images/repogit.png)
+
 En la parte de repositorios presionas TAB y presionas "New"
 
 Nombras a tu repositorio y luego en create repository
 
 ### 🔗Conectar el repositorio local de GIT con uno Github🔗
+
+![conect repo](images/repo.jpeg)
 
 git remote add origin git@github.com:TuUser/TuRepo.git
 
@@ -227,6 +241,8 @@ git brnch -M main
 git push -u origin main
 
 ### Clonar un repositorio de GIT
+
+![clonar](images/clon2.png)
 
 git clone "git@email.com:TuUser/Tu Repo.git"
 
