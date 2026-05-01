@@ -517,6 +517,8 @@ Nota: Si no es tu repo la primera vez debes usar el flag -u para no pedir permis
 
 Esto nos permite tener un mayor control sobre quien quiere mergear o unir a nuestro codigo base
 
+![prs](images/prs.png)
+
 ### 🛠️ Como crearlo?🛠️
 
 Luego de hacer git push origin rama:
@@ -540,6 +542,8 @@ Trabajas en tu rama
 - git push origin rama
 ### Para que sirven los Pull Requests (PRs)
 
+![prs para que sirve](images/prsp.png)
+
 Aunque podriamos trabajar sin ellos, los PRs son necesarios por seguridad y control.
 El problema: Cualquier colaborador podria modificar y fusionar codigo sin supervision, con el riesgo de:
 
@@ -555,6 +559,8 @@ La solucion (PRs):
 - Facilitan un manejo grupal mas seguro del repositorio
 
 ### 🔑Como proteger tu repositorio y limitar la colaboracion🔑
+
+![pullreq](images/pullreq.png)
 
 Usa Pull Requests (PRs)
 
@@ -605,8 +611,10 @@ Commit: Guarda tus cambios
 - git commit -m "Descripcion de tu cambio"
 
 Push: Sube los cambios a tu fork
-bash
 
 - git push origin your-branch-name
 
 Pull Request: Envia una solicitud al dueno del proyecto
+
+#ESO ES TO ESO ES TO ESO ES TODO AUXI🥺 
+![fin](images/fin.jpeg)
