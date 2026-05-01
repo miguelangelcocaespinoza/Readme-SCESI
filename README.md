@@ -374,10 +374,14 @@ Esto es para entender como se crearon
 
 ### Que son las ramas?
 
+![rama](images/rama.png)
+
 Basicamente es crear un nuevo camino a partir de cierto punto del codigo que nos permite tener un mejor control sobre como ira evolucionando el mismo en paralelo a otras ramas
 
 ### Git Branch
 Esta herramienta nos deja gestionar las ramas de nuestro proyecto
+
+![branch](images/branch.png)
 
 #### Comando 1-
 git branch: Permite listar las ramas disponibles y el posicionamiento del HEAD
@@ -386,7 +390,7 @@ git branch <rama>: Crear una nueva rama justo en la posicion que nos encontramos
 #### Comando 3-
 git branch -D <rama>: Borrar la rama
 
-### Git Checkout Enfocado en ramas
+### 🖇️Git Checkout Enfocado en ramas🖇️
 
 Aparte de ser usado para ver los anteriores archivos en base a los commits tambien se puede usar junto a las ramas
 
@@ -397,6 +401,8 @@ Crear una rama y nos redirecciona a ella automaticamente
 
 ### GIT CHECKOUT VS GIT SWITCH
 
+![vs](images/checkswitch.png)
+
 Originalmente git checkout estaba sobrecargado de funcionalidades y usos pero esto implicaba que hubiera muchos comandos parecidos lo que llevaba a que a una minimo error podria acabar en Detached HEAD.
 Por lo que se greo git switch para separar la parte de navegacion de ramas de las demas funciones 
 git checkout sige teniendo las mismas funciones pero switch evita errores
@@ -404,6 +410,8 @@ git checkout sige teniendo las mismas funciones pero switch evita errores
 ### GITFLOW Basico
 
 Esto permite trabajar de manera ordenada entre nuestras ramas, versiones lo cual en proyectos grandes resulta de gran utilidad
+
+![gitflow](images/gitflow.png)
 
 ### Como funciona GITFLOW?
 
@@ -449,6 +457,9 @@ Ejemplos:
 ### Que es GIT merge?
 
 Nos permite fusionar nuestras ramas en una sola. Imagina que tienes dos lineas de tiempo paralelas y quieres unirlas.
+
+![merge](images/merge.png)
+
 #### Ejemplo :
 -git merge rama-feature
 #### Flag --no-ff (no fast-forward)
@@ -459,16 +470,24 @@ Si tenemos la rama main con ABC y la rama feature con DE
 - La M es un commit de fusion que registra: "aqui se unio la rama-feature". Aunque borres la rama, queda la evidencia.
 
 ### git fetch - Ver cambios sin aplicarlos
+
 Es consultar si hay cambios nuevos sin hacer cambios en mi codigo.
 - git fetch origin
 
+![fetch](images/fetch.jpeg)
+
 ### git pull 
+
 Es traer los cambios de github a nuestra computadora
 - git pull origin rama
+
+![pull](images/pull.png)
 
 ### git push
 Es subir los cambios realizados de forma local a github
 - git push origin rama
+
+![push](images/push.png)
 
 Nota: Si no es tu repo la primera vez debes usar el flag -u para no pedir permisos
 - git push origin -u rama
